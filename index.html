@@ -1,89 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lncode</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/node_modules/dejavu-sans-bold-oblique/css/dejavu-sans-bold-oblique.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/dejavu-sans-bold-oblique/css/dejavu-sans-bold-oblique.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <nav class="nav">
-            <ul class="list">
-                <div class="list-items">
-                    
-                    <li>მთავარი</li>
-                    <li>ჩვენს შესახებ</li>
-                </div>
-                <div class="logo-div">
-                    <img class="logo" src="./assets/logo.png" alt="">
-                </div>
-                <div class="list-items">
-                    <li>ფასები</li>
-                    <li id="contact">კონტაქტი</li>
-                </div>
-                </ul>
-        </nav>
+      <nav class="nav">
+        <ul class="list">
+          <div class="nav-left">
+            <li><a href="#home">მთავარი</a></li>
+            <li><a href="#about-us">ჩვენს შესახებ</a></li>
+          </div>
+
+          <div class="logo-div">
+            <img class="logo" src="./assets/logo.png" alt="Logo" />
+          </div>
+
+          <div class="nav-right">
+            <li><a href="./pricing.html">ფასები</a></li>
+            <li><a href="./contact.html">კონტაქტი</a></li>
+          </div>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="land">
-            <div class="land-main">
-                <img class="nika-img" src="./assets/logo.png" alt="nika">
-                <h1>გთავაზობთ ხარისხიან საიტის დამზადებას</h1>
-                <img  class="levan-img" src="./assets/logo.png" alt="levan">
+      <section class="land" id="home">
+        <div class="land-main">
+          <div class="img-div"></div>
+
+          <div class="land-text">
+            <h1 class="slogan">გთავაზობთ ხარისხიან საიტის დამზადებას</h1>
+            <p class="sectitle">თანამედროვე ტექნოლოგიები, მომხმარებელზე მორგებული დიზაინი</p>
+            <button class="contact-btn">დაგვიკავშირდით ახლავე !</button>
+          </div>
+          <div class="img-div"></div>
+        </div>
+      </section>
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <h2 class="section-title">ჩვენს შესახებ</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-image">
+                <img
+                  src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
+                  alt="ნიკოლოზ მუსელიანი"
+                />
+              </div>
+              <h3 class="member-name">ნიკოლოზ მუსელიანი</h3>
+              <p class="member-role">Front-end დეველოპერი</p>
+              <p class="member-bio">
+                გამოცდილი დეველოპერი ReactJS და თანამედროვე Front-end ტექნოლოგიებში. 4+ წლიანი
+                გამოცდილებით ვებ დეველოპმენტში.
+              </p>
+              <div class="member-social">
+                <a href="https://facebook.com/" target="_blank" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://github.com/" target="_blank" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
             </div>
-            <div class="land-sec">
-                <button class="contact-btn">
-                    დაგვიკავშირდით ახლავე !
-                </button>
+            <div class="team-member">
+              <div class="member-image">
+                <img
+                  src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
+                  alt="ლევან ომაძე"
+                />
+              </div>
+              <h3 class="member-name">ლევან ომაძე</h3>
+              <p class="member-role">Back-end დეველოპერი</p>
+              <p class="member-bio">
+                Node.js და PHP სპეციალისტი, მონაცემთა ბაზების ექსპერტი. 5+ წლიანი გამოცდილება ვებ
+                აპლიკაციების შექმნაში.
+              </p>
+              <div class="member-social">
+                <a href="https://facebook.com/" target="_blank" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="https://github.com/" target="_blank" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
             </div>
-        </section>
-        <section class="about-us">
-            <div class="cards">
-                <div class="about-nika">
-                    <img  src="" alt="">
-                    <h1>ნიკოლოზ მუსელიანი</h1>
-                    <p class="rew-nika">
-    
-                    </p>
-                    <div class="contacts-nika">
-                        <a href="">Facebook</a>
-                        <a href="">Github</a>
-                        <a href="">Linkedin</a>
-                    </div>
-                </div>
-                <div class="about-levan">
-                    <img src="" alt="">
-                    <h1>ლევან ომაძე</h1>
-                    <p class="rew-levan"></p>
-                    <div class="contacts-levan">
-                        <a href="">Facebook</a>
-                        <a href="">Github</a>
-                        <a href="">Linkedin</a>
-                    </div>
-                </div>
-            </div>
-            <div class="projects">
-                <div>joker მთვლელი</div>
-                <div>ყავილების მაღაზია</div>
-                <div>პროექტი</div>
-                <div>პროექტი</div>
-            </div>
-        </section>
-        
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="bottom-contacts-levan">
-            <a href="">Facebook</a>
-            <a href="">Github</a>
-            <a href="">Linkedin</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <img src="./assets/logo.png" alt="LNCode Logo" class="footer-logo" />
+            <p>ჩვენ ვქმნით მაღალი ხარისხის ვებგვერდებს და აპლიკაციებს ბიზნესებისთვის.</p>
+          </div>
+
+          <div class="footer-links">
+            <h3>სწრაფი ლინკები</h3>
+            <ul>
+              <li><a href="index.html">მთავარი</a></li>
+              <li><a href="#about-us">ჩვენს შესახებ</a></li>
+              <li><a href="pricing.html">ფასები</a></li>
+              <li><a href="contact.html">კონტაქტი</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>საკონტაქტო ინფორმაცია</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> თბილისი, საქართველო</li>
+              <li><i class="fas fa-phone"></i> +995 555 12 34 56</li>
+              <li><i class="fas fa-envelope"></i> info@lncode.ge</li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h3>სოციალური ქსელები</h3>
+            <div class="social-icons">
+              <a href="https://facebook.com/" target="_blank" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://github.com/" target="_blank" aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <div class="bottom-contacts-nika">
-            <a href="">Facebook</a>
-            <a href="">Github</a>
-            <a href="">Linkedin</a>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 LNCode. ყველა უფლება დაცულია.</p>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

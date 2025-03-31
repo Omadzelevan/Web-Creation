@@ -3,5 +3,27 @@
     "archyedt-bold": "^1.0.0",
     "bpg-dedaena-nonblock": "^1.0.0",
     "dejavu-sans-bold-oblique": "^1.0.0"
-  }
+  },
+  "name": "web-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{html,css,js}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omadzelevan/Web-Creation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omadzelevan/Web-Creation/issues"
+  },
+  "homepage": "https://github.com/Omadzelevan/Web-Creation#readme"
 }

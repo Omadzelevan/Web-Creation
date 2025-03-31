@@ -1,47 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="./contact.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>მთავარი</li>
-                <li>ჩვენს შესახებ</li>
-                <li>ფასები</li>
-                <li id="contact">კონტაქტი</li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="./contact.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/dejavu-sans-bold-oblique/css/dejavu-sans-bold-oblique.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="list">
+          <div class="nav-left">
+            <li><a href="./index.html#home">მთავარი</a></li>
+            <li><a href="./index.html#about-us">ჩვენს შესახებ</a></li>
+          </div>
+
+          <div class="logo-div">
+            <img class="logo" src="./assets/logo.png" alt="Logo" />
+          </div>
+
+          <div class="nav-right">
+            <li><a href="./pricing.html">ფასები</a></li>
+            <li><a href="./contact.html">კონტაქტი</a></li>
+          </div>
+        </ul>
+      </nav>
     </header>
+
     <section class="form">
-        <form action="">
-            <label for="email">იმეილი</label>
-            <input type="email" name="email" id="">
-            <label for="Phone">ტელეფონის ნომერი</label>
-            <input type="tel" name="Phone" id="">
-            <label for="web">როგორი საიტის დამზადება გინდათ?</label>
-            <textarea id="text-box" name="web">
-            </textarea>
-            <button type="submit">გაგზავნა</button>
-        </form>
+      <form action="">
+        <label for="email">იმეილი</label>
+        <input type="email" name="email" id="" />
+        <label for="Phone">ტელეფონის ნომერი</label>
+        <input type="tel" name="Phone" id="" />
+        <label for="web">როგორი საიტის დამზადება გინდათ?</label>
+        <textarea id="text-box" name="web"> </textarea>
+        <button type="submit">გაგზავნა</button>
+      </form>
     </section>
+
     <footer class="footer">
-        <div class="bottom-contacts-levan">
-            <a href="">Facebook</a>
-            <a href="">Github</a>
-            <a href="">Linkedin</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <img src="./assets/logo.png" alt="LNCode Logo" class="footer-logo" />
+            <p>ჩვენ ვქმნით მაღალი ხარისხის ვებგვერდებს და აპლიკაციებს ბიზნესებისთვის.</p>
+          </div>
+
+          <div class="footer-links">
+            <h3>სწრაფი ლინკები</h3>
+            <ul>
+              <li><a href="index.html">მთავარი</a></li>
+              <li><a href="#about-us">ჩვენს შესახებ</a></li>
+              <li><a href="pricing.html">ფასები</a></li>
+              <li><a href="contact.html">კონტაქტი</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>საკონტაქტო ინფორმაცია</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> თბილისი, საქართველო</li>
+              <li><i class="fas fa-phone"></i> +995 555 12 34 56</li>
+              <li><i class="fas fa-envelope"></i> info@lncode.ge</li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <h3>სოციალური ქსელები</h3>
+            <div class="social-icons">
+              <a href="https://facebook.com/" target="_blank" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://github.com/" target="_blank" aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <div class="bottom-contacts-nika">
-            <a href="">Facebook</a>
-            <a href="">Github</a>
-            <a href="">Linkedin</a>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 LNCode. ყველა უფლება დაცულია.</p>
         </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
-
-
