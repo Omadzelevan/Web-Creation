@@ -32,7 +32,7 @@
     </header>
 
     <section class="form">
-      <form action="">
+      <form action="https://formspree.io/f/xrbpynpj" method="POST">
         <div class="form-group">
           <label for="email">იმეილი</label>
           <input type="email" name="email" id="email" />
@@ -46,22 +46,28 @@
           <textarea id="text-box" name="web" rows="5" cols="33"> </textarea>
         </div>
         <!-- <button type="submit">გაგზავნა</button> -->
-        <button type="submit" style="
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0 5px 0 #2E7D32, 0 5px 10px rgba(0,0,0,0.2);
-        transition: all 0.1s ease;
-        cursor: pointer;
-        position: relative;
-        top: 0;
-      ">გაგზავნა</button>
+        <button
+          type="submit"
+          style="
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            box-shadow:
+              0 5px 0 #2e7d32,
+              0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.1s ease;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+          "
+        >
+          გაგზავნა
+        </button>
       </form>
-
     </section>
 
     <footer class="footer">
@@ -117,25 +123,21 @@
     </footer>
     <script>
       const button = document.querySelector('button[type="submit"]');
-      
+
       button.addEventListener('mousedown', () => {
         button.style.top = '5px';
         button.style.boxShadow = '0 0 0 #2E7D32, 0 1px 5px rgba(0,0,0,0.2)';
       });
-      
+
       button.addEventListener('mouseup', () => {
         button.style.top = '0';
         button.style.boxShadow = '0 5px 0 #2E7D32, 0 5px 10px rgba(0,0,0,0.2)';
       });
-      
+
       button.addEventListener('mouseout', () => {
         button.style.top = '0';
         button.style.boxShadow = '0 5px 0 #2E7D32, 0 5px 10px rgba(0,0,0,0.2)';
       });
     </script>
-
-
-
-    
   </body>
 </html>

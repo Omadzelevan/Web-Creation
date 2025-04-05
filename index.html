@@ -49,10 +49,16 @@
           <div class="team-grid">
             <div class="team-member">
               <div class="member-image">
-                <img
-                  src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
-                  alt="ნიკოლოზ მუსელიანი"
-                />
+                <picture>
+                  <source srcset="./assets/bohemian-man.webp" type="image/webp" />
+                  <img
+                    src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
+                    alt="ნიკოლოზ მუსელიანი"
+                    loading="lazy"
+                    width="300"
+                    height="300"
+                  />
+                </picture>
               </div>
               <h3 class="member-name">ნიკოლოზ მუსელიანი</h3>
               <p class="member-role">Front-end დეველოპერი</p>
@@ -152,7 +158,7 @@
         </div>
       </div>
     </footer>
-    <script>
+    <!-- <script>
       let images = document.querySelectorAll(".img-div");
       let bigImages = ["./assets/image1-large.png", "./assets/image2-large.png"]; // Ensure correct paths
 
@@ -172,6 +178,6 @@
       logoImage.src = this.src;
       };
       bigLogoImage.src = "./assets/logo-large.png"; // Ensure the correct path to the large logo image
-    </script>
+    </script> -->
   </body>
 </html>
