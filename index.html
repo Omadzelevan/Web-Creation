@@ -152,5 +152,26 @@
         </div>
       </div>
     </footer>
+    <script>
+      let images = document.querySelectorAll(".img-div");
+      let bigImages = ["./assets/image1-large.png", "./assets/image2-large.png"]; // Ensure correct paths
+
+      images.forEach((imageDiv, index) => {
+      let bigImage = document.createElement("img");
+      bigImage.onload = function () {
+        let imgElement = document.createElement("img");
+        imgElement.src = this.src;
+        imageDiv.appendChild(imgElement);
+      };
+      bigImage.src = bigImages[index];
+      });
+
+      let logoImage = document.querySelector(".logo");
+      let bigLogoImage = document.createElement("img");
+      bigLogoImage.onload = function () {
+      logoImage.src = this.src;
+      };
+      bigLogoImage.src = "./assets/logo-large.png"; // Ensure the correct path to the large logo image
+    </script>
   </body>
 </html>
