@@ -1,3 +1,4 @@
+<!-- This is a sample implementation for index.html, but similar changes should be applied to all pages -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,6 +10,8 @@
       rel="stylesheet"
       href="/node_modules/dejavu-sans-bold-oblique/css/dejavu-sans-bold-oblique.min.css"
     />
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="./assets/logo.png" />
   </head>
   <body>
     <header class="header">
@@ -20,7 +23,8 @@
           </div>
 
           <div class="logo-div">
-            <img class="logo" src="./assets/logo.png" alt="Logo" />
+            <!-- Width and height attributes prevent layout shift -->
+            <img class="logo" src="./assets/logo.png" alt="Logo" width="150" height="50" />
           </div>
 
           <div class="nav-right">
@@ -49,9 +53,13 @@
           <div class="team-grid">
             <div class="team-member">
               <div class="member-image">
+                <!-- Lazy load below-the-fold images with loading="lazy" -->
                 <img
+                  loading="lazy"
                   src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
                   alt="ნიკოლოზ მუსელიანი"
+                  width="300"
+                  height="400"
                 />
               </div>
               <h3 class="member-name">ნიკოლოზ მუსელიანი</h3>
@@ -74,9 +82,13 @@
             </div>
             <div class="team-member">
               <div class="member-image">
+                <!-- Lazy load below-the-fold images with loading="lazy" -->
                 <img
+                  loading="lazy"
                   src="./assets/bohemian-man-with-his-arms-crossed-removebg-preview.png"
                   alt="ლევან ომაძე"
+                  width="300"
+                  height="400"
                 />
               </div>
               <h3 class="member-name">ლევან ომაძე</h3>
@@ -105,10 +117,19 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-about">
-            <img src="./assets/logo.png" alt="LNCode Logo" class="footer-logo" />
+            <!-- Use srcset for responsive images -->
+            <img 
+              loading="lazy"
+              src="./assets/logo.png" 
+              srcset="./assets/logo-small.png 300w, ./assets/logo.png 600w"
+              sizes="(max-width: 600px) 300px, 600px"
+              alt="LNCode Logo" 
+              class="footer-logo" 
+            />
             <p>ჩვენ ვქმნით მაღალი ხარისხის ვებგვერდებს და აპლიკაციებს ბიზნესებისთვის.</p>
           </div>
 
+          <!-- Rest of the footer content remains the same -->
           <div class="footer-links">
             <h3>სწრაფი ლინკები</h3>
             <ul>
@@ -152,5 +173,62 @@
         </div>
       </div>
     </footer>
+
+    <!-- Script to efficiently load all images -->
+    <script>
+      // Function to check if element is in viewport
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      // Load images that are marked with data-src when they come into view
+      document.addEventListener("DOMContentLoaded", function() {
+        // Load all images with lazy-load class
+        const lazyImages = document.querySelectorAll("img[loading='lazy']");
+        
+        if ("IntersectionObserver" in window) {
+          // Use Intersection Observer if available
+          const imageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                const image = entry.target;
+                if (image.dataset.src) {
+                  image.src = image.dataset.src;
+                  image.removeAttribute("data-src");
+                }
+                imageObserver.unobserve(image);
+              }
+            });
+          });
+
+          lazyImages.forEach(function(image) {
+            imageObserver.observe(image);
+          });
+        } else {
+          // Fallback for browsers that don't support Intersection Observer
+          function lazyLoad() {
+            lazyImages.forEach(function(image) {
+              if (isInViewport(image) && image.dataset.src) {
+                image.src = image.dataset.src;
+                image.removeAttribute("data-src");
+              }
+            });
+          }
+
+          // Load visible images right away
+          lazyLoad();
+          
+          // Add event listeners for when user scrolls or resizes
+          window.addEventListener("scroll", lazyLoad);
+          window.addEventListener("resize", lazyLoad);
+        }
+      });
+    </script>
   </body>
 </html>
